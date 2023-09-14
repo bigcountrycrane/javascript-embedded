@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Hello, world!</title>
+    <script type="module" src="../src/client.js"></script>
+    <link rel="stylesheet" type="text/css" href="./styles.css" />
+  </head>
+  <body>
+    <div class="container">
+      <div class="content">
+        <h2><code>&lt;Flatfile /&gt;</code></h2>
+        <p>Embed Flatfile in just a few lines of code.</p>
+
+        <!-- Button to trigger the modal -->
+        <!-- Note: PUT YOUR KEY IN HERE -->
+        <div>
+          <button class="contrast" onclick="openExistingFlatfileSpace()">
+            Open existing Space
+          </button>
+          <button
+            class="contrast"
+            onclick="initializeNewFlatfileSpace('pk_123456')"
+          >
+            Create new Space
+          </button>
+        </div>
+      </div>
+      <div id="flatfile_iFrameContainer"></div>
+    </div>
+  </body>
+</html>
