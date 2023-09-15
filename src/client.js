@@ -1,4 +1,6 @@
 import { initializeFlatfile } from "@flatfile/javascript";
+import { config } from "./config"
+import { listener } from "./listener";
 
 const server_url = "http://localhost:8080";
 
@@ -24,8 +26,14 @@ window.openExistingFlatfileSpace = () => {
 //create a new space in modal
 window.initializeNewFlatfileSpace = (publishableKey, environmentId) => {
   const flatfileOptions = {
+    environmentId: "us_env_RoeXzhEI",
     publishableKey,
+    workbook: config,
     displayAsModal: false,
+    sidebarConfig: {
+      showSidebar: false,
+    },
+    listener
     // Additional parameters...
   };
 
